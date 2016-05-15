@@ -1,0 +1,23 @@
+<!--
+  Generated template for the ToolsPage page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-navbar *navbar dark>
+  <ion-title>Tools</ion-title>
+</ion-navbar>
+
+<ion-content padding class="tools">
+  <ion-row>
+    <ion-col (click)="goToOtherPage()" width-40 class="icon-holder" style="text-align: center; background: #cecece; margin-right: 14px; cursor:pointer;">
+      <ion-icon name="md-infinite"></ion-icon>
+      <h3>Percentage</h3>
+    </ion-col>
+    <ion-col (click)="goToWotb()" width-40 class="icon-holder" style="text-align: center; background: #cecece; margin-right: 14px; cursor:pointer;">
+      <ion-icon name="md-stats"></ion-icon><br/>
+      <h3>W.O.T.B</h3>
+    </ion-col>
+
+  </ion-row>
+</ion-content>

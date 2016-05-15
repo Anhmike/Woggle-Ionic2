@@ -1,0 +1,48 @@
+<!--
+  Generated template for the ToolsWotbPage page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-navbar *navbar dark>
+  <ion-title>tools-wotb</ion-title>
+</ion-navbar>
+
+<ion-content padding class="tools-wotb">
+  <h1>Weight on The Bar</h1>
+  <h1 style="text-align: center">{{weightOnTheBar}} (kg)</h1>
+  <ion-list>
+    <ion-item>
+      <ion-row>
+        <ion-col>Barbell</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col width-50><button (click)="addBar(15)" [disabled]="bar>0" full primary>15</button></ion-col>
+        <ion-col width-50><button (click)="addBar(20)" [disabled]="bar>0" full primary>20</button></ion-col>
+      </ion-row>
+    </ion-item>
+    <ion-item>
+      <ion-row>
+        <ion-col>Plates</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col width-25><button (click)="addWeight(0.5)" full primary>0.5</button></ion-col>
+        <ion-col width-25><button (click)="addWeight(1.25)" full primary>1.25</button></ion-col>
+        <ion-col width-25><button (click)="addWeight(2.5)" full primary>2.5</button></ion-col>
+        <ion-col width-25><button (click)="addWeight(5)" full primary>5</button></ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col width-25><button (click)="addWeight(10)" full primary>10</button></ion-col>
+        <ion-col width-25><button (click)="addWeight(15)" full primary>15</button></ion-col>
+        <ion-col width-25><button (click)="addWeight(20)" full primary>20</button></ion-col>
+        <ion-col width-25><button (click)="addWeight(25)" full primary>25</button></ion-col>
+      </ion-row>
+    </ion-item>
+    <ion-item>
+      <ion-row>
+        <button full warn (click)="reset()">Reset</button>
+      </ion-row>
+    </ion-item>
+  </ion-list>
+  {{barWeights | json}}
+</ion-content>
